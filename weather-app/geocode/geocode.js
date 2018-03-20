@@ -1,5 +1,6 @@
 const request = require('request');
 
+//ATH:needs to add key
 
 var geocodeAddress = (address, callback) => {
 
@@ -7,7 +8,7 @@ var geocodeAddress = (address, callback) => {
   //console.log(inputAddress);
 
   request({
-    url: 'https://maps.googleapis.com/maps/api/geocode/json?address=' + inputAddress + '&key=AIzaSyCa69-pDHH6LGxwSaKWhqZGYH2eOV3e-yA',
+    url: 'https://maps.googleapis.com/maps/api/geocode/json?address=' + inputAddress + '&key=[mykey]',
     json: true
   }, (error, response, body) => {
     if (error){

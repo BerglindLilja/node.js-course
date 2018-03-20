@@ -1,17 +1,18 @@
 const request = require('request');
 
+//ATH needs to add APIkey
 var geocodeAddress = (address) => {
   return new Promise((resolve, reject) => {
     var encodedAddress = encodeURIComponent(address);
 
     request({
-      url: 'https://maps.googleapis.com/maps/api/geocode/json?address=' + encodedAddress + '&key=AIzaSyCa69-pDHH6LGxwSaKWhqZGYH2eOV3e-yA',
+      url: 'https://maps.googleapis.com/maps/api/geocode/json?address=' + encodedAddress + '&key=[mykey]',
       json: true
     }, (error, response, body) => {
       if (error){
         reject('Unable to connect to google servers.');
       } else if (body.status === 'ZERO_RESULTS'){
-        creject('Unable to find that address.');
+        reject('Unable to find that address.');
       } else if (body.status === 'OK'){
         resolve({
           address: body.results[0].formatted_address,

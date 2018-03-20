@@ -34,6 +34,4 @@ const argv = yargs
   } );
 
 
-  //api key weather site
-  //ae125688623730469031a2359055ba5e
-  //https://api.darksky.net/forecast/[key]/[latitude],[longitude]
+  

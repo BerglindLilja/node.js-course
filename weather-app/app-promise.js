@@ -1,6 +1,7 @@
 const yargs = require('yargs');
 const axios = require('axios');
 
+//ATH - need to add apiKey
 
 const argv = yargs
   .options({
@@ -17,7 +18,7 @@ const argv = yargs
   .argv;
 
   var encodedAddress = encodeURIComponent(argv.address);
-  var geocodeURL = 'https://maps.googleapis.com/maps/api/geocode/json?address=' + encodedAddress + '&key=AIzaSyCa69-pDHH6LGxwSaKWhqZGYH2eOV3e-yA';
+  var geocodeURL = 'https://maps.googleapis.com/maps/api/geocode/json?address=' + encodedAddress + '&key=[myKey]';
 
   axios.get(geocodeURL).then((response) => {
     //console.log(response);

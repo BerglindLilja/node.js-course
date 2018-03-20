@@ -14,7 +14,3 @@ getUser(31, (user) => {
 
   console.log(user);
 });
-
-//Your project ID will be weather-app-198514
-// AIzaSyCa69-pDHH6LGxwSaKWhqZGYH2eOV3e-yA 
-// key=API_KEY
