@@ -161,7 +161,7 @@ describe('GET /todos/:id', () => {
   });
 
 
-describe('PATCH /todos/id:', () => {
+//describe('PATCH /todos/id:', () => {
 
   // it('should update the todo', (done) => {
   //   var hexId = todos[0]._id.toHexString();
@@ -183,4 +183,4 @@ describe('PATCH /todos/id:', () => {
   // });
 
 
-})
+//})
