@@ -7,7 +7,7 @@ var authenticate = (req, res, next) => {
     if(!user) {
       return Promise.reject();
     }
-    
+
     req.user = user;
     req.token = token;
     next();
@@ -16,4 +16,4 @@ var authenticate = (req, res, next) => {
   });
 };
 
-module.exports = {authenticate};
+module.exports = { authenticate };

@@ -2,6 +2,7 @@ const _ = require('lodash');
 const express = require('express');
 const bodyParser = require('body-parser');
 const {ObjectID} = require('mongodb');
+const port = process.env.PORT || 3000;
 
 var {mongoose} = require('./db/mongoose');
 var {Todo} = require('./models/todo');
@@ -154,8 +155,8 @@ app.delete('/users/me/token', authenticate, (req, res) => {
   });
 });
 
-app.listen(3000, () => {
-  console.log('started on port 3000')
+app.listen(port, () => {
+  console.log(`started on port ${port}`);
 });
 
 module.exports = {app};
